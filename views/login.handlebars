@@ -1,5 +1,43 @@
-<!-- Sign Up Section -->
-
-
-
-<!-- Login Section --> 
+<!-- Log In / Sign Up Screen -->
+            <div class="w-screen h-3/4 flex flex-col justify-center items-center">
+                <!-- Log In / Sign Up Section -->
+                <div class="w-2/3 h-1/2 bg-blue-300 rounded-xl shadow-lg shadow-gray-400 border-r-4 border-b-8 border-gray-400 flex justify-center items-center">
+                    <div class="w-1/2 h-full flex flex-col justify-center items-center md:border-r-4 border-gray-900">
+                        <h1 class="text-4xl py-4">Log In:</h1>
+                        <form class="flex flex-col gap-4">
+                            <div class="flex flex-col gap-2">
+                                <label class="font-bold">Username:</label>
+                                <input class="text-black text-center rounded-xl" type="text" placeholder="Username" required />
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="font-bold">Password:</label>
+                                <input class="text-black text-center rounded-xl" type="password" name="pass" placeholder="Password" title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numeric characters" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
+                            </div>
+                            <div class="flex flex-col justify-center items-center py-4">
+                                <button class="w-36 inline-block px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md shadow-gray-600 hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out" type="submit">Log In</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Sign Up Section --> 
+                    <div class="w-1/2 h-full flex flex-col justify-center items-center">
+                        <h1 class="text-4xl py-4">Sign Up:</h1>
+                        <form class="flex flex-col gap-4">
+                            <div class="flex flex-col gap-2">
+                                <label class="font-bold">Username:</label>
+                                <input class="text-black text-center rounded-xl" type="text" placeholder="Username" required />
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="font-bold">Email:</label>
+                                <input class="text-black text-center rounded-xl" type="email" placeholder="Email" required />
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="font-bold">Password:</label>
+                                <input class="text-black text-center rounded-xl" type="password" name="pass" placeholder="Password" title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numeric characters" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
+                            </div>
+                            <div class="flex flex-col justify-center items-center py-4">
+                                <button class="w-36 inline-block px-6 py-2.5 bg-blue-400 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md shadow-gray-600 hover:bg-blue-500 hover:shadow-lg focus:bg-blue-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out" type="submit">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
