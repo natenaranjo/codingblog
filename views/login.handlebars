@@ -1,43 +1,44 @@
 <!-- Log In / Sign Up Screen -->
-            <div class="w-screen h-3/4 flex flex-col justify-center items-center">
-                <!-- Log In / Sign Up Section -->
-                <div class="w-2/3 h-1/2 bg-blue-300 rounded-xl shadow-lg shadow-gray-400 border-r-4 border-b-8 border-gray-400 flex justify-center items-center">
-                    <div class="w-1/2 h-full flex flex-col justify-center items-center md:border-r-4 border-gray-900">
-                        <h1 class="text-4xl py-4">Log In:</h1>
-                        <form class="flex flex-col gap-4">
-                            <div class="flex flex-col gap-2">
-                                <label class="font-bold">Username:</label>
-                                <input class="text-black text-center rounded-xl" type="text" placeholder="Username" required />
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <label class="font-bold">Password:</label>
-                                <input class="text-black text-center rounded-xl" type="password" name="pass" placeholder="Password" title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numeric characters" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
-                            </div>
-                            <div class="flex flex-col justify-center items-center py-4">
-                                <button class="w-36 inline-block px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md shadow-gray-600 hover:bg-green-600 hover:shadow-lg focus:bg-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition duration-150 ease-in-out" type="submit">Log In</button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Sign Up Section --> 
-                    <div class="w-1/2 h-full flex flex-col justify-center items-center">
-                        <h1 class="text-4xl py-4">Sign Up:</h1>
-                        <form class="flex flex-col gap-4">
-                            <div class="flex flex-col gap-2">
-                                <label class="font-bold">Username:</label>
-                                <input class="text-black text-center rounded-xl" type="text" placeholder="Username" required />
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <label class="font-bold">Email:</label>
-                                <input class="text-black text-center rounded-xl" type="email" placeholder="Email" required />
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <label class="font-bold">Password:</label>
-                                <input class="text-black text-center rounded-xl" type="password" name="pass" placeholder="Password" title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numeric characters" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" >
-                            </div>
-                            <div class="flex flex-col justify-center items-center py-4">
-                                <button class="w-36 inline-block px-6 py-2.5 bg-blue-400 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md shadow-gray-600 hover:bg-blue-500 hover:shadow-lg focus:bg-blue-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out" type="submit">Sign Up</button>
-                            </div>
-                        </form>
-                    </div>
+<div class="w-full h-screen flex justify-center items-center">
+    <div class="w-full flex flex-col md:flex-row justify-center items-center">
+        <!-- Login Form -->
+        <div class="w-full md:w-[35%] lg:w-[30%] h-[550px] flex flex-col justify-center bg-stone-600 rounded-xl shadow-lg shadow-gray-500 m-2 p-8">
+            <h1 class="text-6xl text-cyan-400 m-4 pb-4 text-center">Login</h1>
+            <form id="login-form">
+                <div class="mb-5 pb-4">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-200">Email</label>
+                    <input type="email" id="login-name" name="email" class="block w-full p-3 rounded-lg bg-gray-200 border border-transparent focus:outline-none" required />
                 </div>
-            </div>
+                <div class="mb-5 pb-4">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-200">Password</label>
+                    <input type="password" id="login-password" name="password" class="block w-full p-2 rounded-lg bg-gray-200 border border-transparent focus:outline-noen" required />
+                </div>
+                <button type="submit" class="w-full p-3 mt-4 bg-cyan-600 text-white rounded shadow">Login</button>
+            </form>
+        </div>
+        <!-- Sign Up Form -->
+        <div class="w-full md:w-[35%] lg:w-[30%] h-[550px] flex flex-col justify-center bg-stone-600 rounded-xl shadow-lg shadow-gray-500 m-2 p-8">
+            <h1 class="text-6xl text-cyan-400 m-4 pb-4 text-center">Sign Up</h1>
+            <form id="signup-form">
+                <div class="mb-5">
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-200">Name</label>
+                    <input type="text" id="signup-name" name="name" class="block w-full p-3 rounded-lg bg-gray-200 border border-transparent focus:outline-none" required />
+                </div>
+                <div class="mb-5">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-200">Email</label>
+                    <input type="email" id="signup-email" name="email" class="block w-full p-3 rounded-lg bg-gray-200 border border-transparent focus:outline-none" required />
+                </div>
+                <div class="mb-5">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-200">Password</label>
+                    <input type="password" id="signup-password" name="password" class="block w-full p-2 rounded-lg bg-gray-200 border border-transparent focus:outline-noen" required />
+                </div>
+                <div class="mb-5">
+                    <button type="submit" class="w-full p-3 mt-5 bg-cyan-600 text-white rounded shadow">Sign Up</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/js/login.js"></script>

@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Test 1",
+        "text": "Just the first post test",
+        "date_created": "9/15/22",
+        "user_id": "1",
+        "comments_id": ""
+    },
+    {
+        "title": "Test 2",
+        "text": "Just the second post test",
+        "date_created": "9/17/22",
+        "user_id": "2",
+        "comments_id": ""
+    },
+    {
+        "title": "Test 3",
+        "text": "Just the third post test",
+        "date_created": "9/19/22",
+        "user_id": "2",
+        "comments_id": ""
+    },
+    {
+        "title": "Test 4",
+        "text": "Just the forth post test",
+        "date_created": "9/21/22",
+        "user_id": "3",
+        "comments_id": ""
+    }
+]
