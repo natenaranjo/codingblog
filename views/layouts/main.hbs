@@ -17,16 +17,13 @@
                             <p class="text-cyan-400 text-4xl font-bold">/</p>
                         </div>
                         <div class="p-4">
-                            <h1 class="text-xl md:text-4xl text-cyan-400">Coding Blog</h1>
+                            <h1 class="text-xl md:text-4xl text-cyan-400">100 Days of Coding</h1>
                         </div>
                     </a>
                 </div>
                 <div class="flex justify-center items-center p-4 gap-4">
                     {{#if logged_in}}
-                        <div class="flex flex-row">
-                            <p class="text-md text-white">Logged in as: </p>
-                            <a class="text-lg font-bold text-cyan-400" href="">{{ user.name }}</a>
-                        </div>
+                        <a class="text-lg font-bold text-cyan-400" href="/dash">Dashboard</a>
                         <p class="text-xl text-cyan-400">|</p>
                         <a href="/" class="text-lg font-bold text-cyan-400" id="logout">Logout</a>
                         <script src="/js/logout.js"></script>

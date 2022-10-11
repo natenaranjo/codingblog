@@ -3,13 +3,13 @@
         "title": "Test 1",
         "text": "Just the first post test",
         "date_created": "9/15/22",
-        "user_id": "1"
+        "user_id": "2"
     },
     {
         "title": "Test 2",
         "text": "Just the second post test",
         "date_created": "9/17/22",
-        "user_id": "1"
+        "user_id": "2"
     },
     {
         "title": "Test 3",
@@ -21,6 +21,6 @@
         "title": "Test 4",
         "text": "Just the forth post test",
         "date_created": "9/21/22",
-        "user_id": "3"
+        "user_id": "2"
     }
 ]

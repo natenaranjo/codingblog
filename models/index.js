@@ -27,11 +27,6 @@ Comment.belongsTo(User, {
     onDelete: 'CASCADE'
 })
 
-User.belongsTo(Comment, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
-})
-
 Comment.belongsTo(Post, {
     foreignKey: 'post_id',
     onDelete: 'CASCADE'

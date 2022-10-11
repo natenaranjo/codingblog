@@ -28,7 +28,7 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword = userData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
@@ -51,8 +51,9 @@ router.post('/login', async (req, res) => {
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
-    req.session.destroy((err) =>{
-      res.json({message: "now logged out"}).status(204).end();
+    req.session.destroy(() =>{
+      res.render('/');
+      res.status(204).end();
     });
   } else {
     res.status(404).end();
