@@ -16,7 +16,7 @@ const hbs = exphbs.create({ defaultLayout: "main", extname: '.hbs', helpers: hel
 const sess = {
     secret: process.env.SECRET,
     cookie: {
-        maxAge: 300000,
+        maxAge: 3000000,
     },
     resave: false,
     saveUnitialized: true,

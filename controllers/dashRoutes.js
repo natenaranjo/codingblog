@@ -30,4 +30,24 @@ router.get('/', withAuth, async (req, res) => {
         });
 })
 
+router.get('/:id', withAuth, async (req, res) => {
+  const postData = await Post.findByPk(req.params.id,{
+    include: [
+      {
+        model: User,
+        attributes: ['name']
+      }
+    ]
+  });
+
+  const post = postData.get({ plain: true });
+
+  console.log(post);
+
+  res.render('edit', {
+    post,
+    logged_in: req.session.logged_in
+  });
+})
+
 module.exports = router;

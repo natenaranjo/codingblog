@@ -16,6 +16,19 @@ const withAuth = require('../../utils/auth');
 //   }
 // });
 
+router.put('/:id', withAuth, async (req, res) => {
+  try {
+    await Post.update(req.body, {
+        where: {
+            id: req.params.id,
+        },
+    });
+      res.status(200).end();
+  } catch (err) {
+      res.status(500).json(err);
+  }
+})
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.destroy({

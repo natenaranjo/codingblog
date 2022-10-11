@@ -1,8 +1,8 @@
 <div class="w-full h-full">
     <hr class="w-full h-px bg-gray-100 opacity-20">
     <div class="w-3/4 mx-auto text-center flex flex-col p-8 gap-4">
-        <h2 class="text-6xl text-cyan-400">{{ user.name }}</h2>
-        <h2 class="text-4xl text-cyan-400 pb-8">Dashboard</h2>
+        <h2 class="text-6xl tracking-widest text-cyan-400">{{ user.name }}</h2>
+        <h2 class="text-4xl tracking-wider text-cyan-400 pb-8">Dashboard</h2>
         <hr class="w-full h-px bg-gray-100 opacity-20">
     </div>
     <div class="w-3/4 mx-auto">
@@ -10,7 +10,7 @@
         <div class="w-full flex flex-col p-4">
             <div class="flex flex-row justify-between">
                 <div>
-                    <h1 class="py-4 px-8 text-4xl text-cyan-400 font-medium">{{ title }}</h1>
+                    <h1 class="py-4 px-8 text-4xl tracking-wider text-cyan-400 font-medium">{{ title }}</h1>
                 </div>
                 <div class="flex flex-row justify-center items-center gap-4 px-8">
                     <button id="{{ id }}" class="bg-green-400 rounded-lg p-1 hover:scale-110 cursor-pointer" onclick="editPost(this.id)">
@@ -25,10 +25,11 @@
                     </button>
                 </div>
             </div>
-            <p class="pb-8 px-8 text-lg text-gray-400">{{ text }}</p>
+            <p class="pb-8 px-8 text-lg tracking-wide text-gray-400">{{ text }}</p>
             <hr class="w-full h-px bg-gray-100 opacity-20">
         </div>
         {{/each}}
     </div>
 </div>
+
 <script src="/js/dash.js"></script>
