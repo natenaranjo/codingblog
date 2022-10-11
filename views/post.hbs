@@ -1,0 +1,56 @@
+<div class="posts">
+  <div class="w-screen h-auto flex justify-center items-center px-16 py-8">
+    <div class="w-3/4 h-auto flex flex-col">
+
+      <div class="flex flex-col justify-center items-center gap-2">
+        <h3 class="text-xl text-gray-500">{{ format_date postInfo.date_created }}</h3>
+        <h1 class="text-6xl font-bold text-white pb-8">{{ postInfo.title }}</h1>
+        <hr class="w-full h-px bg-gray-100 opacity-20">
+      </div>
+
+      <div class="flex flex-col py-8">
+        <p class="text-lg text-white px-8 py-4">{{ postInfo.text }}</p>
+        <div class="w-full flex flex-row justify-between items-center px-8 py-4">
+          <p class="text-white">Written by: <span class="text-cyan-400 font-bol">{{ postInfo.user.name }}</span></p>
+          {{#if logged_in}}
+            <button id="addComm" class="font-bold uppercase text-cyan-500 underline">Add Comment</button>
+          {{/if}}
+        </div>
+        <hr class="w-full h-px bg-gray-100 opacity-20">
+      </div>
+      <div id="commSection" class="hidden w-full pb-8">
+
+          <form id="postComment" class="w-3/4 h-auto mx-auto">
+            <div class="flex flex-col gap-4">
+              <label class="block mb-2 text-lg font-medium text-gray-200">Enter comment below:</label>
+              <textarea id="comment-text" class="block w-full p-3 rounded-lg bg-gray-200 border border-transparent focus:outline-none" row="20"></textarea>
+            </div>
+            <div class="mb-5 flex justify-end px-8">
+              <button class="p-2 mt-5 bg-cyan-600 text-white rounded shadow uppercase">Submit Comment</button>
+            </div>
+          </form>
+
+      </div>
+
+      <!-- Comment Secton -->
+      {{#each postInfo.comments as |comment|}}
+        <div class="w-full py-2">
+          <div class="w-3/4 mx-auto">
+            <div class="flex flex-row gap-4">
+              <h2 class="text-4xl text-white">L</h2>
+              <h3 class="pt-4 text-lg text-gray-400">{{ comment.text }}</h3>
+            </div>
+            <div class="flex justify-around py-4">
+              <p class="text-gray-400">Created on: <span class="text-md font-medium text-cyan-600">{{ format_date comment.date_created }}</span></p>
+              <p class="text-gray-400">Commented by: <span class="text-md font-medium text-cyan-600">{{ comment.user.name }}</span></p>
+            </div>
+            <hr class="w-full h-px bg-gray-100 opacity-20">
+          </div>
+        </div>
+      {{/each}}
+
+    </div>
+  </div>
+</div>
+
+<script src="/js/post.js"></script>

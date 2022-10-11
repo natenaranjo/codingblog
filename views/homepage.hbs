@@ -7,7 +7,7 @@
       </div>
       <div>
         {{#each posts as |post| }}
-          <article class="py-4" id="{{post.id}}">
+          <article class="article py-4" id="{{post.id}}">
             <hr class="w-full h-px bg-gray-100 opacity-20">
             <div class="flex flex-row py-4 gap-32">
               <div class="text-white text-lg p-4">
@@ -17,7 +17,7 @@
                 <h2 class="text-2xl font-medium text-gray-100">{{title}}</h2>
                 <a class="uppercase text-sm font-medium text-cyan-400 pb-4" href="/user/{{post.user_id}}">{{post.user.name}}</a>
                 <p class="py-2 text-md text-gray-400">{{text}}</p>
-                <a href="/post/{{post.id}}" class="text-md text-cyan-400 pt-2">Read more -></a>
+                <button id="{{post.id}}" class=" button text-md text-cyan-400 pt-2 cursor-pointer" onclick="singlePost(this.id)">Read more -></button>
               </div>
             </div>
           </article>
@@ -26,3 +26,5 @@
     </div>
   </div>
 </div>
+
+<script src="/js/homepage.js"></script>

@@ -1,7 +1,6 @@
-const { response } = require("express");
-
-const logout = async () => {
-    const repsonse = await fetch ('/api/users/logout', {
+const logout = async (e) => {
+    e.preventDefault();
+    const response = await fetch ('/api/users/logout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
     });
@@ -13,6 +12,4 @@ const logout = async () => {
     }
 };
 
-document
-    .querySelector('#logout')
-    .addEventListener('click', logout);
+document.getElementById('logout').addEventListener('click', logout);

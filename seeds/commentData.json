@@ -1,0 +1,20 @@
+[
+    {
+        "text": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups",
+        "date_created": "9/16/2022",
+        "post_id": "1",
+        "user_id": "1"
+    },
+    {
+        "text": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups",
+        "date_created": "9/18/2022",
+        "post_id": "1",
+        "user_id": "2"
+    },
+    {
+        "text": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups",
+        "date_created": "9/20/2022",
+        "post_id": "1",
+        "user_id": "3"
+    }
+]
