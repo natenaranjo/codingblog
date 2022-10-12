@@ -9,11 +9,11 @@ const sequelize = require('./config/connection');
 const SeqStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
-const PORT = process.env.PORT || 3338;
+const PORT = process.env.PORT || 3001;
 
 // adds the functionality of helpers to handlebars engine
 const helpers = require('./utils/helpers');
-const hbs = exphbs.create({ helpers });//helpers 
+const hbs = exphbs.create({ defaultLayout: 'main', extname: '.hbs', helpers });//helpers 
 
 // constructing session/cookie
 const sess = {
@@ -33,8 +33,8 @@ const sess = {
 
 app.use(session(sess));
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+app.engine('hbs', hbs.engine);
+app.set('view engine', 'hbs');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
