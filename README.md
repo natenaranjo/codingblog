@@ -14,6 +14,7 @@
   <p align="center">
     Explore the document by the links below:
     <br />
+    <br />
     <a href="https://techblogofnate.herokuapp.com"><strong>View Demo »</strong></a>
     <br />
     <br />
