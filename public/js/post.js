@@ -30,19 +30,22 @@ document.getElementById('newComment').addEventListener('submit', newComment);
 function updateCom(e){
     e.preventDefault();
 
-    let id = document.querySelector('.updateCom').id;
+    let commentId = document.querySelector('.updateCom').id;
     let previousText = document.querySelector('.updateCom').name;
 
     document.getElementById('editComm').classList.remove('hidden');
     document.getElementById('commEdit').value = previousText;
+    document.querySelector('.subEdit').setAttribute('id', commentId);
 }
 
 document.querySelector('.updateCom').addEventListener('click', updateCom);
 
+
+
 async function updateComment(clicked_id){
    
-    let post_id = document.getElementById('editComment').name;
-    let comm_id = document.getElementById('subEdit').name;
+    let post_id = document.querySelector('.editComment').id;
+    let comm_id = document.querySelector('.subEdit').id;
     let text = document.getElementById('commEdit').value;
 
     const response = await fetch(`/api/comments/${clicked_id}`, {
@@ -52,7 +55,7 @@ async function updateComment(clicked_id){
     });
 
     if (response.ok){
-        console.log('Updated comment was sent!')
+        document.location.reload();
     } else {
         alert('Comment update failed!')
     }
@@ -66,7 +69,7 @@ async function delComment(clicked_id){
     })
 
     if (response.ok) {
-        window.location.reload();
+        document.location.reload();
     } else {
         alert('Delete of comment was not successful');
     }

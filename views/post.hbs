@@ -29,16 +29,16 @@
             </div>
           </form>
       </div>
-      <div id="editComm" class=" w-full pb-8">
-          <form id="editComment" name="{{comment.post_id}}" class="w-3/4 h-auto mx-auto">
+      <div id="editComm" class="hidden w-full pb-8">
+          <div id="{{comment.post_id}}" class="editComment w-3/4 h-auto mx-auto">
             <div class="flex flex-col gap-4">
               <label class="block mb-2 text-lg font-medium text-gray-200">Edit comment below:</label>
               <textarea id="commEdit" class="block w-full p-3 rounded-lg bg-gray-200 border border-transparent focus:outline-none" row="20"></textarea>
             </div>
             <div class="mb-5 flex justify-end px-8">
-              <button type="submit" id="{{comment.id}}" class="p-2 mt-5 bg-cyan-600 text-white rounded shadow uppercase" onclick="updateComment(this.id)">Submit</button>
+              <button type="button" id="" class="subEdit p-2 mt-5 bg-cyan-600 text-white rounded shadow uppercase" onclick="updateComment(this.id)">Submit</button>
             </div>
-          </form>
+          </div>
       </div>
       <div class="comlog w-full" id="{{ userId }}">
         <!-- Comment Secton -->
