@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3338;
 
 // adds the functionality of helpers to handlebars engine
-// const helpers = require('./public/js/helpers');
+const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ helpers });//helpers 
 
 // constructing session/cookie
