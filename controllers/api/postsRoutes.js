@@ -15,7 +15,6 @@ router.post('/', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 
-  console.log('Post Request received!')
 });
 
 router.put('/:id', withAuth, async (req, res) => {

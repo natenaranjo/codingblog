@@ -48,8 +48,6 @@ router.get('/:id', withAuth, async (req, res) => {
 
   const post = singleData.get({ plain: true });
 
-  console.log(post);
-
   res.render('edit', {
     post,
     logged_in: req.session.logged_in

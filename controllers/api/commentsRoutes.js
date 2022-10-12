@@ -18,9 +18,6 @@ router.put('/:id', withAuth, async (req, res) => {
     })
     .then(comments => res.json(comments))
     .catch((err) => res.status(500).json(err))
-
-    console.log('Fetch request was received!');
-    console.log(req.params.id);
 })
 
 router.delete('/:id', withAuth, async (req, res) => {
