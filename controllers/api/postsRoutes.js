@@ -3,30 +3,27 @@ const { User } = require('discord.js');
 const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// router.post('/', withAuth, async (req, res) => {
-//   try {
-//     const newPost = await Post.create({
-//       ...req.body,
-//       user_id: req.session.user_id,
-//     });
+router.post('/', withAuth, async (req, res) => {
+  try {
+    const newPost = await Post.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
 
-//     res.status(200).json(newPost);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
+    res.status(200).json(newPost);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+
+  console.log('Post Request received!')
+});
 
 router.put('/:id', withAuth, async (req, res) => {
-  try {
-    await Post.update(req.body, {
-        where: {
-            id: req.params.id,
-        },
-    });
-      res.status(200).end();
-  } catch (err) {
-      res.status(500).json(err);
-  }
+  Post.update(req.body, {
+    where: { id: req.params.id },
+  })
+  .then(posts => res.json(posts))
+  .catch((err) => res.status(500).json(err))
 })
 
 router.delete('/:id', withAuth, async (req, res) => {

@@ -18,11 +18,9 @@ router.get('/', withAuth, async (req, res) => {
 
         });
     
-        const posts = postData.map((post) => post.get({ plain: true }));
+        const posts = postData.map((posts) => posts.get({ plain: true }));
         const user = userData.get({ plain: true });
     
-        console.log(posts);
-
         res.render('dash', {
           posts,
           user,
@@ -30,8 +28,16 @@ router.get('/', withAuth, async (req, res) => {
         });
 })
 
+router.get('/new', withAuth, async (req, res) => {
+  
+  res.render('new', {
+    logged_in: req.session.logged_in
+  });
+
+})
+
 router.get('/:id', withAuth, async (req, res) => {
-  const postData = await Post.findByPk(req.params.id,{
+  const singleData = await Post.findByPk(req.params.id,{
     include: [
       {
         model: User,
@@ -40,7 +46,7 @@ router.get('/:id', withAuth, async (req, res) => {
     ]
   });
 
-  const post = postData.get({ plain: true });
+  const post = singleData.get({ plain: true });
 
   console.log(post);
 
@@ -49,5 +55,6 @@ router.get('/:id', withAuth, async (req, res) => {
     logged_in: req.session.logged_in
   });
 })
+
 
 module.exports = router;

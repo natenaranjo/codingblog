@@ -1,5 +1,3 @@
-console.log('Dash js was successfully loaded!');
-
 async function editPost(clicked_id){
     const response = await fetch(`/dash/${clicked_id}`, {
         method: 'GET'
@@ -23,3 +21,19 @@ async function deletePost(clicked_id){
         alert('Delete was not successful!')
     }
 }
+
+async function createPost(){
+
+    const response = await fetch('/dash/new', {
+        method: 'GET'
+    });
+
+    if (response.ok) {
+        document.location.replace('/dash/new');
+    } else {
+        alert('Something went wrong!');
+    }
+
+} 
+
+document.getElementById('newPost').addEventListener('click', createPost);
