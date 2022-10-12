@@ -14,9 +14,12 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ defaultLayout: "main", extname: '.hbs', helpers: helpers });
 
 const sess = {
-    secret: "Hackers 1995",
+    secret: 'Super secret secret',
     cookie: {
-        maxAge: 3000000,
+        maxAge: 900000,
+        httpOnly: true,
+        secure: false,
+        sameSite: 'strict',
     },
     resave: false,
     saveUnitialized: true,
