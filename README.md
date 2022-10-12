@@ -17,7 +17,7 @@
     <a href="https://github.com/natenaranjo/codingblog"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://intense-sierra-67829.herokuapp.com/">View Demo</a>
+    <a href="https://techblogofnate.herokuapp.com">View Demo</a>
     ·
     <a href="https://github.com/natenaranjo/codingblog/issues">Report Bug</a>
     ·
