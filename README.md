@@ -14,10 +14,11 @@
   <p align="center">
     Explore the document by the links below:
     <br />
-    <a href="https://github.com/natenaranjo/codingblog"><strong>Explore the docs »</strong></a>
+    <br />
+    <a href="https://techblogofnate.herokuapp.com"><strong>View Demo »</strong></a>
     <br />
     <br />
-    <a href="https://intense-sierra-67829.herokuapp.com/">View Demo</a>
+    <a href="https://github.com/natenaranjo/codingblog">Explore the docs </a>
     ·
     <a href="https://github.com/natenaranjo/codingblog/issues">Report Bug</a>
     ·
