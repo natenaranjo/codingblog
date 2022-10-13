@@ -17,12 +17,9 @@
                 <h2 class="text-2xl font-medium text-gray-200">{{title}}</h2>
                 <a class="uppercase text-sm font-medium text-cyan-400 pb-4" href="/user/{{post.user_id}}">{{post.user.name}}</a>
                 <p class="max-h-36 py-2 text-md text-gray-400 tracking-wide leading-7 text-ellipsis overflow-hidden">{{text}}</p>
-                <div class="flex flex-row justify-end px-16">
-                  <button id="{{post.id}}" class="button text-md text-cyan-400 pt-2 cursor-pointer" onclick="singlePost(this.id)">
-                    Read more 
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                    </svg>
+                <div class="flex justify-end px-16">
+                  <button id="{{post.id}}" class="button text-md text-cyan-400 flex flex-row gap-1 justify-center items-center pt-2 cursor-pointer" onclick="singlePost(this.id)">
+                    Read more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
                   </button>
                 </div>
               </div>
